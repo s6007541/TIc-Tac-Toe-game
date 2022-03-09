@@ -5,5 +5,5 @@ Has 2 mode : user vs bot and user vs user
 bot will never lose!!!!!!!!
 
 # What do I learn from this project?
-Use basic GUI library in java
+Use basic GUI library in java\n
 learn tactic of game tic tac toe
