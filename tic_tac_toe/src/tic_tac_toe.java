@@ -38,18 +38,21 @@ public class tic_tac_toe implements ActionListener{
 
         button_panel.setBounds(0,200,500,500);
         button_panel.setLayout(new GridLayout(3,3));
-        button_panel.setBackground(new Color(150,150,150));
+        button_panel.setBackground(new Color(118,96,138));
         
 
         for(int i = 0; i < 9; i++){
             buttons[i] = new JButton();
             button_panel.add(buttons[i]);
-            buttons[i].setFont(new Font("Ink free", Font.BOLD, 50));
+            buttons[i].setFont(new Font("Ink free", Font.BOLD, 70));
+            buttons[i].setForeground(new Color(33,64,100));
             buttons[i].setFocusable(false);
-            buttons[i].addActionListener(this); 
+            buttons[i].addActionListener(this);
+            
         }
 
         restart_button.setFont(new Font("Ink free", Font.BOLD, 50));
+        restart_button.setForeground(new Color(0,100,100));
         restart_button.setFocusable(false);
         restart_button.addActionListener(this);
         restart_button.setText("restart");
@@ -58,6 +61,7 @@ public class tic_tac_toe implements ActionListener{
         bot_button.setFocusable(false);
         bot_button.addActionListener(this);
         bot_button.setText("Bot : OFF");
+        bot_button.setForeground(new Color(200,0,0));
 
         title_panel.add(textfield,"North");
         title_panel.add(restart_button,"Center");
@@ -71,7 +75,7 @@ public class tic_tac_toe implements ActionListener{
             Thread.sleep(1000);
         }
         catch (Exception e) {
-            // System.out.println(e);
+            System.out.println(e);
         }
         random_start();
         
@@ -89,10 +93,12 @@ public class tic_tac_toe implements ActionListener{
                 if(boton == false){
                     boton = true;
                     bot_button.setText("Bot : ON");
+                    bot_button.setForeground(new Color(0,150,0));
                 }
                 else{
                     boton = false;
                     bot_button.setText("Bot : OFF");
+                    bot_button.setForeground(new Color(200,0,0));
                 }
                 
             }
